@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgot_pass_toolbar_layout"
+        android:padding="@dimen/mar_10"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/mar_30"
+            android:layout_height="@dimen/mar_30"
+            android:id="@+id/forgot_pass_back_iv"
+            android:src="@drawable/ic_arrow_left"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:textSize="@dimen/textSize20sp"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_40"
+        android:layout_marginLeft="@dimen/mar_30"
+        android:layout_marginRight="@dimen/mar_30"
+        android:layout_marginBottom="@dimen/mar_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/textSize14sp"
+            android:text="Don't worry ! Just fill in your registered mail id and we'll help you reset your password"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Enter your mail address"
+            android:background="@null"
+            android:id="@+id/forgot_pass_email_tv"
+            android:layout_marginTop="@dimen/mar_50"
+            android:textSize="@dimen/textSize16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_0_2"
+            android:background="@color/Gray"
+            android:layout_marginTop="@dimen/mar_8"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_40"
+            android:background="@drawable/button_background_red"
+            android:layout_marginTop="@dimen/mar_30"
+            android:textColor="@color/White"
+            android:text="Send mail"
+            android:id="@+id/forgot_pass_send_mail_btn"
+            android:textAllCaps="false"
+            android:textSize="@dimen/textSize16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to login"
+            android:id="@+id/forgot_pass_login_tv"
+            android:layout_marginTop="@dimen/mar_30"
+            android:textSize="@dimen/textSize14sp"
+            android:textColor="@color/OrangeRed"/>
+
+    </LinearLayout>
+
+</LinearLayout>

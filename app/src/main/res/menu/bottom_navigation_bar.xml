@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/orders"
+        android:icon="@drawable/ic_orders"
+        android:title="Orders"/>
+
+    <item android:id="@+id/delivery"
+        android:color="@color/OrangeRed"
+        android:icon="@drawable/ic_delivery"
+        android:title="Delivery"/>
+
+    <item android:id="@+id/items"
+        android:color="@color/OrangeRed"
+        android:icon="@drawable/ic_items"
+        android:title="Items"/>
+
+    <item android:id="@+id/account"
+        android:color="@color/OrangeRed"
+        android:icon="@drawable/ic_account"
+        android:title="Account"/>
+
+</menu>

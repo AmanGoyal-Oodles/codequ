@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/mar_40"
+    android:layout_marginLeft="@dimen/mar_30"
+    android:layout_marginRight="@dimen/mar_30"
+    android:layout_marginBottom="@dimen/mar_20"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="Email Address"
+        android:layout_marginTop="@dimen/mar_10"
+        android:id="@+id/signin_email_add_et"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/textSize12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mar_0_2"
+        android:layout_below="@+id/signin_email_add_et"
+        android:id="@+id/signin_email_add_view"
+        android:layout_marginTop="@dimen/mar_5"
+        android:background="@color/Gray"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_below="@+id/signin_email_add_view"
+        android:id="@+id/signin_password_et"
+        android:layout_marginTop="@dimen/mar_20"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:textSize="@dimen/textSize12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mar_0_2"
+        android:layout_marginTop="@dimen/mar_5"
+        android:id="@+id/signin_password_view"
+        android:layout_below="@+id/signin_password_et"
+        android:background="@color/Gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signin_password_view"
+        android:layout_marginTop="@dimen/mar_10"
+        android:id="@+id/signin_forgot_pass_tv"
+        android:text="Forgot Password?"
+        android:textSize="@dimen/textSize10sp"
+        android:textColor="@color/OrangeRed"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mar_40"
+        android:layout_below="@+id/signin_forgot_pass_tv"
+        android:layout_marginTop="@dimen/mar_40"
+        android:background="@drawable/button_background_red"
+        android:text="Sign in"
+        android:id="@+id/signin_btn"
+        android:textColor="@color/White"
+        android:textAllCaps="false"
+        android:textSize="@dimen/textSize14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin_btn"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/mar_30">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not registered yet?"
+            android:id="@+id/sigin_nry_tv"
+            android:textSize="@dimen/textSize12sp"
+            android:textColor="@color/Gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up Now"
+            android:textColor="@color/OrangeRed"
+            android:textSize="@dimen/textSize12sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</RelativeLayout>

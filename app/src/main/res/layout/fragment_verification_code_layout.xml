@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mar_10"
+        android:id="@+id/forgot_pass_toolbar_layout"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/mar_30"
+            android:layout_height="@dimen/mar_30"
+            android:id="@+id/verification_code_back_iv"
+            android:src="@drawable/ic_arrow_left"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verification Code"
+            android:textSize="@dimen/textSize20sp"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_40"
+        android:layout_marginLeft="@dimen/mar_30"
+        android:layout_marginRight="@dimen/mar_30"
+        android:layout_marginBottom="@dimen/mar_20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/textSize14sp"
+            android:id="@+id/verification_code_text_1_tv"
+            android:text="Please type the Verification Code "
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/textSize14sp"
+            android:id="@+id/verification_code_text_2_tv"
+            android:layout_below="@+id/verification_code_text_1_tv"
+            android:text="send to +91 9876543210"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/verification_code_otp_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_code_text_2_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="@dimen/mar_25"
+            android:background="@null"
+            android:inputType="number"
+            android:letterSpacing="@integer/letter_spacing_2"
+            android:text="5657"
+            android:textSize="@dimen/textSize20sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar_5"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginRight="@dimen/mar_20"
+            android:layout_below="@+id/verification_code_otp_et"
+            android:id="@+id/verification_code_et_view"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_weight="1"
+                android:background="@color/Gray"
+                android:layout_marginTop="@dimen/mar_8"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_marginLeft="@dimen/mar_10"
+                android:layout_weight="1"
+                android:background="@color/Gray"
+                android:layout_marginTop="@dimen/mar_8"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/mar_10"
+                android:background="@color/Gray"
+                android:layout_marginTop="@dimen/mar_8"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_weight="1"
+                android:background="@color/Gray"
+                android:layout_marginLeft="@dimen/mar_10"
+                android:layout_marginTop="@dimen/mar_8"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_40"
+            android:background="@drawable/button_background_red"
+            android:layout_marginTop="@dimen/mar_30"
+            android:layout_below="@+id/verification_code_et_view"
+            android:textColor="@color/White"
+            android:text="Verify now"
+            android:id="@+id/verification_code_btn"
+            android:textAllCaps="false"
+            android:textSize="@dimen/textSize16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:48 left"
+            android:id="@+id/verification_code_time_left_tv"
+            android:layout_below="@+id/verification_code_btn"
+            android:layout_marginTop="@dimen/mar_30"
+            android:textSize="@dimen/textSize14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend"
+            android:id="@+id/verification_code_resend_tv"
+            android:layout_below="@+id/verification_code_btn"
+            android:layout_marginTop="@dimen/mar_30"
+            android:textColor="@color/OrangeRed"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/textSize14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

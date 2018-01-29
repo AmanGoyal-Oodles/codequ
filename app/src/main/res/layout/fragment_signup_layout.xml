@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_20"
+        android:layout_marginLeft="@dimen/mar_30"
+        android:layout_marginRight="@dimen/mar_30"
+        android:layout_marginBottom="@dimen/mar_20"
+        android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:id="@+id/register_email_et"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/textSize12sp"
+        android:hint="Email Address"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mar_0_2"
+        android:layout_marginTop="@dimen/mar_10"
+        android:layout_below="@+id/register_email_et"
+        android:id="@+id/register_email_view"
+        android:background="@color/Gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_email_view"
+        android:id="@+id/register_pass_layout"
+        android:layout_marginTop="@dimen/mar_30"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:id="@+id/register_pass_et"
+                android:inputType="textPassword"
+                android:textSize="@dimen/textSize12sp"
+                android:hint="New Password"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_marginTop="@dimen/mar_10"
+                android:id="@+id/register_pass_view"
+                android:background="@color/Gray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/mar_30"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:id="@+id/register_confirm_et"
+                android:inputType="textPassword"
+                android:textSize="@dimen/textSize12sp"
+                android:hint="Confirm"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_marginTop="@dimen/mar_10"
+                android:id="@+id/register_confirm_view"
+                android:background="@color/Gray"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:id="@+id/register_phone_et"
+        android:layout_below="@+id/register_pass_layout"
+        android:layout_marginTop="@dimen/mar_30"
+        android:inputType="phone"
+        android:textSize="@dimen/textSize12sp"
+        android:hint="10 digit Phone Number"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mar_0_2"
+        android:layout_marginTop="@dimen/mar_10"
+        android:layout_below="@+id/register_phone_et"
+        android:id="@+id/register_phone_view"
+        android:background="@color/Gray"/>
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_40"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/register_phone_view"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/button_background_red"
+            android:text="Register Now"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textSize="@dimen/textSize14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_btn"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/mar_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already registered?"
+            android:id="@+id/register_ar_tv"
+            android:textSize="@dimen/textSize12sp"
+            android:textColor="@color/Gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in Now"
+            android:textColor="@color/OrangeRed"
+            android:textSize="@dimen/textSize12sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</RelativeLayout>
