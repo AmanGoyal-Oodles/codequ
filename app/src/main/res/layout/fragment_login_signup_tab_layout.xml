@@ -10,12 +10,12 @@
             android:id="@+id/auth_tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/mar_15"
-            android:layout_marginRight="@dimen/mar_15"
             android:background="@color/White"
+            app:tabIndicatorColor="@color/Lime"
             app:tabMode="fixed"
             app:tabGravity="fill"
-            app:tabTextColor="@color/Black"
+            app:tabTextColor="@color/Gray"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
             app:tabSelectedTextColor="@color/Black"
             android:minHeight="?attr/actionBarSize" />
 

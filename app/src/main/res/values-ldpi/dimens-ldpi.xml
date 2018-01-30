@@ -38,6 +38,7 @@
     <dimen name="mar_100">100dp</dimen>
     <dimen name="mar_125">125dp</dimen>
     <dimen name="mar_150">150dp</dimen>
+    <dimen name="mar_180">180dp</dimen>
     <dimen name="mar_200">200dp</dimen>
     <dimen name="mar_250">250dp</dimen>
     <dimen name="mar_300">300dp</dimen>
@@ -45,4 +46,5 @@
     //numbers
     <integer name="letter_spacing_2">2</integer>
 
-</resources>
+
+    </resources>

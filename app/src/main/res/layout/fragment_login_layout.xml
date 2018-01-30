@@ -9,8 +9,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/mar_40"
-    android:layout_marginLeft="@dimen/mar_30"
-    android:layout_marginRight="@dimen/mar_30"
+    android:layout_marginLeft="@dimen/mar_40"
+    android:layout_marginRight="@dimen/mar_40"
     android:layout_marginBottom="@dimen/mar_20"
     android:orientation="vertical">
 
@@ -94,6 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign up Now"
+            android:id="@+id/signin_signup_tv"
             android:textColor="@color/OrangeRed"
             android:textSize="@dimen/textSize12sp"/>
     </LinearLayout>

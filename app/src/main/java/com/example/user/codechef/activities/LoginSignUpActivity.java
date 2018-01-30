@@ -28,8 +28,6 @@ public class LoginSignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_sign_up);
-        ActionBar actionBar =  getSupportActionBar();
-        actionBar.hide();
         ButterKnife.bind(this);
         tabPosition=getIntent().getIntExtra(IntentKeyConstants.TAB_POSITION,0);
         openLoginSIgnUpTabFragment();    

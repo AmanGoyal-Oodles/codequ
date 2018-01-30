@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CodeChef</string>
+    <string-array name="account_list">
+        <item>Profile</item>
+        <item>Review</item>
+        <item>Documents</item>
+        <item>Bank Details</item>
+        <item>Earnings</item>
+        <item>Support</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string-array name="account_list_icons">
+
+    </string-array>
 </resources>

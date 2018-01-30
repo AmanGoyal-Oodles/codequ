@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.example.user.codechef.R;
 import com.example.user.codechef.activities.HomeActivity;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -29,6 +29,9 @@ public class SignInFragment extends Fragment {
     TextView mForgotPassTv;
     @BindView(R.id.signin_btn)
     Button mSignInBtn;
+    @BindView(R.id.signin_signup_tv)
+    TextView mSignUpTv;
+    private ViewPager mViewPager;
     private Context mContext;
     private static final String TAG=SignInFragment.class.getName();
 
@@ -44,6 +47,7 @@ public class SignInFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
         mContext=getContext();
+        mViewPager=(ViewPager)getActivity().findViewById(R.id.auth_viewpager);
     }
 
     @OnClick({R.id.signin_forgot_pass_tv})
@@ -65,6 +69,11 @@ public class SignInFragment extends Fragment {
     public void onClickSignIn() {
         Intent intent=new Intent(mContext, HomeActivity.class);
         startActivity(intent);
+    }
+
+    @OnClick({R.id.signin_signup_tv})
+    public void onClickSignUp() {
+        mViewPager.setCurrentItem(1);
     }
 
 }
