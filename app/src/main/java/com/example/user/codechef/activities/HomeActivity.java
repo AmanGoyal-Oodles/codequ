@@ -17,6 +17,7 @@ import com.example.user.codechef.fragments.ForgotPasswordFragment;
 import com.example.user.codechef.fragments.ItemsFragment;
 import com.example.user.codechef.fragments.OrdersFragment;
 import com.example.user.codechef.fragments.VerificationCodeFragment;
+import com.example.user.codechef.utils.util.helperclasses.BottomNavigationViewHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.home_frame,fragment,TAG);
         fragmentTransaction.commit();
+        BottomNavigationViewHelper.removeShiftMode(mNavigationView);
         mNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -68,4 +70,6 @@ public class HomeActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
 }

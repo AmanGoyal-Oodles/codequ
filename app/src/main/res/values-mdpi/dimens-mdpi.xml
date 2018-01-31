@@ -14,7 +14,7 @@
     <dimen name="textSize12sp">12sp</dimen>
     <dimen name="textSize10sp">10sp</dimen>
 
-
+    <dimen name="mar__1">-1dp</dimen>
     <dimen name="mar_0">0dp</dimen>
     <dimen name="mar_0_5">0.5dp</dimen>
     <dimen name="mar_0_2">0.2dp</dimen>
@@ -45,5 +45,5 @@
     <dimen name="fab_margin">16dp</dimen>
 
     //numbers
-    <integer name="letter_spacing_2">2</integer>
+    <item name="text_line_spacing" format="float" type="dimen">1.8</item>
 </resources>

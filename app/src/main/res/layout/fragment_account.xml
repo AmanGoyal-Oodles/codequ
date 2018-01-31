@@ -5,15 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Account"
-        android:gravity="center"
-        android:textSize="@dimen/textSize24sp"/>
-
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_30"
         android:id="@+id/account_list_rv"/>
+
 </LinearLayout>

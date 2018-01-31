@@ -57,6 +57,7 @@
         android:layout_below="@id/signin_password_view"
         android:layout_marginTop="@dimen/mar_10"
         android:id="@+id/signin_forgot_pass_tv"
+        android:padding="@dimen/mar_10"
         android:text="Forgot Password?"
         android:textSize="@dimen/textSize10sp"
         android:textColor="@color/OrangeRed"

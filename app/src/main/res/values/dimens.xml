@@ -45,5 +45,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="mar_80">80dp</dimen>
 
-
+    <item name="text_line_spacing" format="float" type="dimen">2.0</item>
 </resources>

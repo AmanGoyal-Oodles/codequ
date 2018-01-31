@@ -1,6 +1,8 @@
 package com.example.user.codechef.adapters;
 
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by user on 1/30/2018.
@@ -24,11 +27,13 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
 
 
     private Context mContext;
-    private ArrayList<String> accountListName;
+    private String[] accountListName;
+    private TypedArray icons;
 
     public AccountListAdapter(Context context) {
         mContext=context;
-       // accountListName.addAll(mContext.getResources().getStringArray(R.id.account_list));
+        accountListName=mContext.getResources().getStringArray(R.array.account_list);
+        icons=mContext.getResources().obtainTypedArray(R.array.account_list_icons);
     }
 
     @Override
@@ -39,12 +44,13 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
 
     @Override
     public void onBindViewHolder(AccountListHolder holder, int position) {
-
+        holder.imageView.setImageDrawable(icons.getDrawable(position));
+        holder.textView.setText(accountListName[position]);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return accountListName.length;
     }
 
     public class AccountListHolder extends RecyclerView.ViewHolder {
@@ -57,6 +63,30 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
         public AccountListHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
+            imageView.setColorFilter(mContext.getResources().getColor(R.color.Lime));
         }
+
+        @OnClick({R.id.account_item_tv})
+        public void onClickItem() {
+            int position=getAdapterPosition();
+            switch(position) {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+            }
+        }
+
     }
+
 }

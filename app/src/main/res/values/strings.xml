@@ -10,7 +10,13 @@
         <item>Settings</item>
     </string-array>
 
-    <string-array name="account_list_icons">
-
-    </string-array>
+    <integer-array name="account_list_icons">
+        <item>@drawable/ic_person</item>
+        <item>@drawable/ic_review</item>
+        <item>@drawable/ic_documents</item>
+        <item>@drawable/ic_bank_detail</item>
+        <item>@drawable/ic_earnings</item>
+        <item>@drawable/ic_email</item>
+        <item>@drawable/ic_settings</item>
+    </integer-array>
 </resources>
