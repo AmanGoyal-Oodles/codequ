@@ -10,6 +10,12 @@
         <item>Settings</item>
     </string-array>
 
+    <string-array name="item_type">
+        <item>Choose Item Category</item>
+        <item>Veg Food</item>
+        <item>Non-Veg Food</item>
+    </string-array>
+
     <integer-array name="account_list_icons">
         <item>@drawable/ic_person</item>
         <item>@drawable/ic_review</item>

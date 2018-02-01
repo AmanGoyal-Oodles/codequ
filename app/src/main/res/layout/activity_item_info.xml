@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.user.codechef.activities.AddItemActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Lime"
+            android:padding="@dimen/mar_10">
+
+            <ImageView
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:src="@drawable/ic_arrow_left_white"
+                android:id="@+id/item_info_back_iv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Item"
+                android:textColor="@color/White"
+                android:layout_marginLeft="@dimen/mar_5"
+                android:textSize="@dimen/textSize20sp"
+                android:layout_toRightOf="@+id/item_info_back_iv"/>
+
+            <ImageView
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:id="@+id/item_info_edit_iv"
+                android:src="@drawable/ic_edit_white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/mar_15"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_200"
+            android:background="@color/LightGray">
+
+            <ImageView
+                android:id="@+id/item_info_camera_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/background" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mar_30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textColor="@color/OrangeRed"
+                android:textSize="@dimen/textSize16sp"
+                android:id="@+id/item_info_name_text_tv"/>
+
+            <TextView
+                android:id="@+id/item_info_name_tv"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/item_info_name_text_tv"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_10"
+                android:textColor="@color/Black"
+                android:text="Laizzie Falod Chicken"
+                android:textSize="@dimen/textSize18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Category"
+                android:textColor="@color/OrangeRed"
+                android:layout_marginTop="@dimen/mar_20"
+                android:textSize="@dimen/textSize16sp"
+                android:layout_below="@+id/item_info_name_tv"
+                android:id="@+id/item_info_category_text_tv"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_info_spinner_tv"
+                android:layout_marginLeft="@dimen/mar__8"
+                android:layout_marginRight="@dimen/mar__10"
+                android:layout_below="@+id/item_info_category_text_tv"
+                android:layout_marginTop="@dimen/mar_10"
+                android:entries="@array/item_type"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Short Description"
+                android:layout_below="@+id/item_info_spinner_tv"
+                android:textColor="@color/OrangeRed"
+                android:textSize="@dimen/textSize16sp"
+                android:layout_marginTop="@dimen/textSize16sp"
+                android:id="@+id/item_info_description_text_tv"/>
+
+            <TextView
+                android:id="@+id/item_info_description_tv"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/item_info_description_text_tv"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_10"
+                android:textColor="@color/Black"
+                android:text="Laizzie Falod Chicken"
+                android:textSize="@dimen/textSize18sp" />
+
+
+            <LinearLayout
+                android:id="@+id/item_info_price_status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_info_description_tv"
+                android:layout_marginTop="@dimen/mar_20"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/item_info_price_text_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Price"
+                        android:textColor="@color/OrangeRed"
+                        android:textSize="@dimen/textSize16sp" />
+
+                    <TextView
+                        android:id="@+id/item_info_price_val_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="25 BD"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/textSize18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mar_40"
+                    android:layout_marginTop="@dimen/mar_10"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_info_available_text_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available?"
+                        android:textSize="@dimen/textSize18sp" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/item_info_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mar_10"
+                        android:checked="true"
+                        android:enabled="false"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specification"
+                android:textColor="@color/OrangeRed"
+                android:textSize="@dimen/textSize16sp"
+                android:layout_marginTop="@dimen/mar_10"
+                android:layout_below="@+id/item_info_price_status_layout"
+                android:id="@+id/item_info_specification_text_tv"/>
+
+            <TextView
+                android:id="@+id/item_info_specification_tv"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/item_info_specification_text_tv"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_10"
+                android:textColor="@color/Black"
+                android:text="Laizzie Falod Chicken"
+                android:textSize="@dimen/textSize18sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

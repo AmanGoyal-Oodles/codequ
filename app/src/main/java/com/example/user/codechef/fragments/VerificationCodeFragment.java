@@ -1,5 +1,6 @@
 package com.example.user.codechef.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class VerificationCodeFragment extends Fragment {
     @BindView(R.id.verification_code_btn)
     Button mVerifyBtn;
     private Context mContext;
+    private Activity mActivity;
 
     @Nullable
     @Override
@@ -41,6 +43,7 @@ public class VerificationCodeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this,view);
         mContext=getContext();
+        mActivity=getActivity();
     }
 
     @OnClick({R.id.verification_code_back_iv})
@@ -50,8 +53,9 @@ public class VerificationCodeFragment extends Fragment {
 
     @OnClick({R.id.verification_code_btn})
     public void onClickVerificationBtn() {
-        Intent intent=new Intent(mContext, HomeActivity.class);
-        startActivity(intent);
+        Intent intent=new Intent(mActivity, HomeActivity.class);
+        mActivity.startActivity(intent);
+        mActivity.finish();
     }
 
 

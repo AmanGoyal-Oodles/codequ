@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.user.codechef.activities.AddItemActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Lime"
+            android:padding="@dimen/mar_10">
+
+            <ImageView
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:src="@drawable/ic_arrow_left_white"
+                android:id="@+id/add_item_back_iv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Item"
+                android:textColor="@color/White"
+                android:layout_marginLeft="@dimen/mar_5"
+                android:textSize="@dimen/textSize20sp"
+                android:layout_toRightOf="@+id/add_item_back_iv"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_200"
+            android:background="@color/LightGray">
+
+            <ImageView
+                android:id="@+id/add_item_camera_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:padding="@dimen/mar_20"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/camera_image_background"
+                android:src="@drawable/ic_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_item_camera_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/mar_10"
+                android:text="Upload Item Image"
+                android:textSize="@dimen/textSize16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mar_30">
+
+            <EditText
+                android:id="@+id/add_item_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Item Name"
+                android:inputType="text"
+                android:textSize="@dimen/textSize18sp" />
+
+            <View
+                android:id="@+id/add_item_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_below="@+id/add_item_name_et"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_item_spinner_tv"
+                android:layout_marginLeft="@dimen/mar__8"
+                android:layout_marginRight="@dimen/mar__10"
+                android:layout_below="@+id/add_item_name_view"
+                android:layout_marginTop="@dimen/mar_10"
+                android:entries="@array/item_type"/>
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Item Category"
+                android:id="@+id/add_item_category_tv"
+                android:layout_below="@+id/add_item_name_view"
+                android:textSize="@dimen/textSize18sp"
+                android:layout_marginTop="@dimen/mar_20"/>
+
+            <ImageView
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:id="@+id/add_item_cat_arrow_iv"
+                android:layout_below="@+id/add_item_name_view"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:layout_marginTop="@dimen/mar_20"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_item_cate_list_view"
+                android:layout_below="@+id/add_item_category_tv"
+                android:divider="@color/LightGray"
+                android:visibility="gone"
+                android:dividerHeight="@dimen/mar_0_5"/>-->
+
+            <View
+                android:id="@+id/add_item_category_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_below="@+id/add_item_spinner_tv"
+                android:layout_marginTop="@dimen/mar_0"
+                android:background="@color/Gray" />
+
+            <EditText
+                android:id="@+id/add_item_description_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_item_category_view"
+                android:layout_marginTop="@dimen/mar_20"
+                android:background="@null"
+                android:hint="Short Description"
+                android:inputType="text"
+                android:textSize="@dimen/textSize18sp" />
+
+            <View
+                android:id="@+id/add_item_description_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_below="@+id/add_item_description_et"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+            <LinearLayout
+                android:id="@+id/add_item_price_status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_item_description_view"
+                android:layout_marginTop="@dimen/mar_20"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/add_item_price_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Price in BD"
+                        android:inputType="number"
+                        android:textSize="@dimen/textSize18sp" />
+
+                    <View
+                        android:id="@+id/add_item_price_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mar_0_2"
+                        android:layout_marginTop="@dimen/mar_10"
+                        android:background="@color/Gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mar_40"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/add_item_available_text_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available?"
+                        android:textSize="@dimen/textSize18sp" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/add_item_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mar_10"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/add_item_specification_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_item_price_status_layout"
+                android:layout_marginTop="@dimen/mar_20"
+                android:background="@null"
+                android:hint="Specification"
+                android:inputType="text"
+                android:textSize="@dimen/textSize18sp" />
+
+            <View
+                android:id="@+id/add_item_specification_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_below="@+id/add_item_specification_et"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+            <Button
+                android:id="@+id/add_item_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_40"
+                android:layout_below="@+id/add_item_specification_view"
+                android:layout_marginTop="@dimen/mar_50"
+                android:background="@drawable/button_background_red"
+                android:text="Add Item"
+                android:textAllCaps="false"
+                android:textColor="@color/White"
+                android:textSize="@dimen/textSize16sp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

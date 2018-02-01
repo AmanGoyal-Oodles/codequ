@@ -43,6 +43,15 @@
         android:hint="Password"
         android:textSize="@dimen/textSize12sp"/>
 
+    <ImageView
+        android:layout_width="@dimen/mar_20"
+        android:layout_height="@dimen/mar_20"
+        android:src="@drawable/ic_hide"
+        android:id="@+id/signin_password_visible_iv"
+        android:layout_below="@id/signin_email_add_view"
+        android:layout_marginTop="@dimen/mar_20"
+        android:layout_alignParentRight="true"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/mar_0_2"

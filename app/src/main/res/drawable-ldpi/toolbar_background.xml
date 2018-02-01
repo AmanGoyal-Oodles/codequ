@@ -14,7 +14,7 @@
     you can change this according to your need -->
     <item
         android:left="@dimen/mar_100"
-        android:right="@dimen/mar_100">
+        android:right="@dimen/mar_70">
         <shape
             android:shape="rectangle">
             <!-- Set the background color of your layout here -->

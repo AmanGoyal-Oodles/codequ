@@ -98,6 +98,7 @@
         <color name="LightSkyBlue">#87CEFA</color>
         <color name="SkyBlue">#87CEEB</color>
         <color name="Gray">#808080</color>
+        <color name="Gray_shade2">#d3d3d3</color>
         <color name="Olive">#808000</color>
         <color name="Purple">#800080</color>
         <color name="Maroon">#800000</color>
@@ -131,7 +132,7 @@
         <color name="Aqua">#00FFFF</color>
         <color name="Cyan">#00FFFF</color>
         <color name="SpringGreen">#00FF7F</color>
-        <color name="Lime">#00FF00</color>
+        <color name="Lime">#24AA1A</color>
         <color name="MediumSpringGreen">#00FA9A</color>
         <color name="DarkTurquoise">#00CED1</color>
         <color name="DeepSkyBlue">#00BFFF</color>

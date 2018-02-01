@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/White"
+    android:layout_marginTop="@dimen/mar_2"
+    android:layout_marginBottom="@dimen/mar_2"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_10"
+        android:layout_marginBottom="@dimen/mar_10"
+        android:layout_marginLeft="@dimen/mar_20"
+        android:layout_marginRight="@dimen/mar_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ahmed Ali"
+            android:id="@+id/new_order_person_name_tv"
+            android:textSize="@dimen/textSize14sp"
+            android:textColor="@color/Black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_order_payment_method_tv"
+            android:text="Cash"
+            android:textSize="@dimen/textSize14sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_order_payment_text_tv"
+            android:layout_toLeftOf="@+id/new_order_payment_method_tv"
+            android:text="Payment by "
+            android:layout_marginTop="@dimen/mar_1"
+            android:textSize="@dimen/textSize12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_order_price_tv"
+            android:layout_centerHorizontal="true"
+            android:text="40 BHD"
+            android:textColor="@color/Black"
+            android:layout_marginTop="@dimen/mar_1"
+            android:textSize="@dimen/textSize14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order #"
+            android:id="@+id/new_order_order_text_tv"
+            android:layout_below="@+id/new_order_person_name_tv"
+            android:layout_marginTop="@dimen/mar_10"
+            android:textSize="@dimen/textSize12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="042"
+            android:id="@+id/new_order_order_number_tv"
+            android:layout_below="@+id/new_order_person_name_tv"
+            android:layout_toRightOf="@+id/new_order_order_text_tv"
+            android:textSize="@dimen/textSize12sp"
+            android:layout_marginTop="@dimen/mar_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ordered on "
+            android:id="@+id/new_order_dispatch_text_tv"
+            android:layout_below="@+id/new_order_order_text_tv"
+            android:textSize="@dimen/textSize12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="07:02 pm, 01 Jan, 18"
+            android:id="@+id/new_order_dispatch_date_tv"
+            android:layout_below="@+id/new_order_order_text_tv"
+            android:layout_toRightOf="@+id/new_order_dispatch_text_tv"
+            android:textSize="@dimen/textSize12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Order"
+            android:layout_marginTop="@dimen/mar__1"
+            android:id="@+id/new_order_status_tv"
+            android:textColor="@color/OrangeRed"
+            android:textSize="@dimen/textSize14sp"
+            android:layout_below="@+id/new_order_order_text_tv"
+            android:layout_toLeftOf="@+id/new_order_arrow_right_iv"
+            android:layout_marginRight="@dimen/mar_5"/>
+
+        <ImageView
+            android:layout_width="@dimen/mar_20"
+            android:layout_height="@dimen/mar_20"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_arrow_right"
+            android:id="@+id/new_order_arrow_right_iv"
+            android:layout_below="@id/new_order_order_text_tv"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

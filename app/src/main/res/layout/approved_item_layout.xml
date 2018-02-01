@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mar_5"
+    app:cardCornerRadius="@dimen/mar_5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/approved_item_layout"
+        android:layout_marginBottom="@dimen/mar_10">
+
+        <ImageView
+            android:id="@+id/approved_item_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_150"
+            android:scaleType="fitXY"
+            android:src="@drawable/background" />
+
+        <ImageView
+            android:layout_width="@dimen/mar_30"
+            android:layout_height="@dimen/mar_20"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_more"
+            android:id="@+id/approved_item_more_iv"
+            android:layout_marginTop="@dimen/mar_10"
+            android:layout_marginRight="@dimen/mar_10"/>
+
+        <TextView
+            android:id="@+id/approved_item_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/approved_item_image_view"
+            android:layout_marginLeft="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Red Chicken Tikka"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/approved_item_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/approved_item_name_tv"
+            android:layout_marginLeft="@dimen/mar_10"
+            android:text="Non-Veg Food"
+            android:textSize="@dimen/textSize14sp" />
+
+        <TextView
+            android:id="@+id/approved_item_available_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/approved_item_image_view"
+            android:layout_marginRight="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Available?"
+            android:textSize="@dimen/textSize14sp" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/approved_item_available_switch"
+            android:layout_below="@+id/approved_item_available_text_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/mar_10"/>
+
+        <TextView
+            android:id="@+id/approved_item_available_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/approved_item_available_text_tv"
+            android:layout_toLeftOf="@id/approved_item_available_switch"
+            android:layout_alignLeft="@+id/approved_item_available_text_tv"
+            android:text="Yes"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize14sp" />
+
+        <TextView
+            android:id="@+id/approved_item_price_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/approved_item_image_view"
+            android:layout_marginRight="@dimen/mar_40"
+            android:layout_marginTop="@dimen/mar_10"
+            android:layout_toLeftOf="@+id/approved_item_available_text_tv"
+            android:text="Price"
+            android:textSize="@dimen/textSize14sp" />
+
+        <TextView
+            android:id="@+id/approved_item_price_val_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/approved_item_price_text_tv"
+            android:layout_below="@+id/approved_item_price_text_tv"
+            android:text="20 BD"
+            android:textSize="@dimen/textSize14sp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

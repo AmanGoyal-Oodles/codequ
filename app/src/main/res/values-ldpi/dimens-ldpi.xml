@@ -21,8 +21,11 @@
     <dimen name="mar_1">1dp</dimen>
     <dimen name="mar_2">2dp</dimen>
     <dimen name="mar_5">5dp</dimen>
+    <dimen name="mar__5">-5dp</dimen>
     <dimen name="mar_8">8dp</dimen>
+    <dimen name="mar__8">-8dp</dimen>
     <dimen name="mar_10">10dp</dimen>
+    <dimen name="mar__10">-10dp</dimen>
     <dimen name="mar_12">12dp</dimen>
     <dimen name="mar_15">15dp</dimen>
     <dimen name="mar_20">20dp</dimen>
