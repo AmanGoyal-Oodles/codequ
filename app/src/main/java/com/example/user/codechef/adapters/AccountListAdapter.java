@@ -1,6 +1,7 @@
 package com.example.user.codechef.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
@@ -9,9 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.user.codechef.R;
+import com.example.user.codechef.activities.BankDetailActivity;
+import com.example.user.codechef.activities.ProfileActivity;
+import com.example.user.codechef.activities.ReviewActivity;
 
 import java.util.ArrayList;
 
@@ -59,6 +64,8 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
         ImageView imageView;
         @BindView(R.id.account_item_tv)
         TextView textView;
+        @BindView(R.id.account_item_layout)
+        LinearLayout accountItemLayout;
 
         public AccountListHolder(View itemView) {
             super(itemView);
@@ -66,17 +73,23 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
             imageView.setColorFilter(mContext.getResources().getColor(R.color.Lime));
         }
 
-        @OnClick({R.id.account_item_tv})
+        @OnClick({R.id.account_item_layout})
         public void onClickItem() {
             int position=getAdapterPosition();
             switch(position) {
                 case 0:
+                    Intent profileIntent=new Intent(mContext, ProfileActivity.class);
+                    mContext.startActivity(profileIntent);
                     break;
                 case 1:
+                    Intent reviewIntent=new Intent(mContext, ReviewActivity.class);
+                    mContext.startActivity(reviewIntent);
                     break;
                 case 2:
                     break;
                 case 3:
+                    Intent bankDetailIntent=new Intent(mContext, BankDetailActivity.class);
+                    mContext.startActivity(bankDetailIntent);
                     break;
                 case 4:
                     break;

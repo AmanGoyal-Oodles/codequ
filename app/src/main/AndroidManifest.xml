@@ -29,7 +29,16 @@
             android:name=".activities.LoginSignUpActivity"
             android:theme="@style/Theme.Transparent" />
         <activity android:name=".activities.HomeActivity" />
-        <activity android:name=".activities.ItemInfoActivity"
+        <activity
+            android:name=".activities.ItemInfoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.ReviewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activities.BankDetailActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 

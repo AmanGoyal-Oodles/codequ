@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.user.codechef.activities.AddItemActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Lime"
+            android:padding="@dimen/mar_10">
+
+            <ImageView
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:src="@drawable/ic_arrow_left_white"
+                android:id="@+id/profile_restro_back_iv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/White"
+                android:layout_marginLeft="@dimen/mar_5"
+                android:textSize="@dimen/textSize20sp"
+                android:layout_toRightOf="@+id/profile_restro_back_iv"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_200"
+            android:background="@color/LightGray">
+
+            <ImageView
+                android:id="@+id/profile_restro_camera_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:padding="@dimen/mar_20"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/camera_image_background"
+                android:src="@drawable/ic_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_restro_camera_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/mar_10"
+                android:text="Upload Restro Image"
+                android:textSize="@dimen/textSize16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restro Details"
+                android:id="@+id/profile_restro_text_tv"
+                android:textColor="@color/OrangeRed"
+                android:layout_marginLeft="@dimen/mar_20"
+                android:textSize="@dimen/textSize16sp"/>
+
+            <ImageView
+                android:layout_width="@dimen/mar_20"
+                android:layout_height="@dimen/mar_20"
+                android:layout_alignParentRight="true"
+                android:id="@+id/profile_restro_edit_iv"
+                android:layout_marginRight="@dimen/mar_20"
+                android:src="@drawable/ic_edit_black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar_30"
+            android:layout_marginRight="@dimen/mar_70"
+            android:layout_marginTop="@dimen/mar_20"
+            android:layout_marginBottom="@dimen/mar_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Name"
+                android:textSize="@dimen/textSize14sp"
+                android:textColor="@color/Lime"
+                android:id="@+id/profile_restro_name_text_tv"/>
+
+            <EditText
+                android:id="@+id/profile_restro_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Restaurant Name"
+                android:text="Khana Khazana Restaurant"
+                android:enabled="false"
+                android:focusable="false"
+                android:textColor="@color/Black"
+                android:layout_below="@+id/profile_restro_name_text_tv"
+                android:layout_marginTop="@dimen/mar_5"
+                android:inputType="text"
+                android:textSize="@dimen/textSize14sp" />
+
+            <View
+                android:id="@+id/profile_restro_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_below="@+id/profile_restro_name_et"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textSize="@dimen/textSize14sp"
+                android:textColor="@color/Lime"
+                android:layout_marginTop="@dimen/mar_10"
+                android:layout_below="@+id/profile_restro_name_view"
+                android:id="@+id/profile_restro_email_text_tv"/>
+
+            <EditText
+                android:id="@+id/profile_restro_email_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Email Address"
+                android:text="khanakhazana@gmail.com"
+                android:enabled="false"
+                android:focusable="false"
+                android:textColor="@color/Black"
+                android:layout_below="@+id/profile_restro_email_text_tv"
+                android:layout_marginTop="@dimen/mar_5"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/textSize14sp" />
+
+            <View
+                android:id="@+id/profile_restro_email_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_below="@+id/profile_restro_email_et"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textSize="@dimen/textSize14sp"
+                android:textColor="@color/Lime"
+                android:layout_marginTop="@dimen/mar_10"
+                android:layout_below="@+id/profile_restro_email_view"
+                android:id="@+id/profile_restro_phone_text_tv"/>
+
+            <EditText
+                android:id="@+id/profile_restro_phone_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Phone Number"
+                android:text="+91 9876543210"
+                android:enabled="false"
+                android:focusable="false"
+                android:textColor="@color/Black"
+                android:layout_below="@+id/profile_restro_phone_text_tv"
+                android:layout_marginTop="@dimen/mar_5"
+                android:inputType="phone"
+                android:textSize="@dimen/textSize14sp" />
+
+            <View
+                android:id="@+id/profile_restro_phone_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_below="@+id/profile_restro_phone_et"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_10"
+            android:background="@color/LightGray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar_20"
+            android:layout_marginBottom="@dimen/mar_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Address"
+                android:id="@+id/profile_restro_address_text_tv"
+                android:textColor="@color/OrangeRed"
+                android:layout_marginLeft="@dimen/mar_20"
+                android:textSize="@dimen/textSize16sp"/>
+
+            <ImageView
+                android:layout_width="@dimen/mar_20"
+                android:layout_height="@dimen/mar_20"
+                android:layout_alignParentRight="true"
+                android:id="@+id/profile_restro_address_edit_iv"
+                android:layout_marginRight="@dimen/mar_20"
+                android:src="@drawable/ic_edit_black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_restro_address_text_tv"
+                android:layout_marginTop="@dimen/mar_20"
+                android:layout_marginRight="@dimen/mar_40"
+                android:layout_marginLeft="@dimen/mar_40"
+                android:id="@+id/profile_restro_address_tv"
+                android:text="104, Adina Park, Opp SBI Bank, Sardar Nagar, Mulund (w), Mumbai - 400080"
+                android:textSize="@dimen/textSize14sp"
+                android:textColor="@color/Gray"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

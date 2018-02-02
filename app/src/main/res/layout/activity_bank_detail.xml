@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightGray"
+    tools:context="com.example.user.codechef.activities.BankDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Lime"
+            android:padding="@dimen/mar_10">
+
+            <ImageView
+                android:id="@+id/bank_detail_back_iv"
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:src="@drawable/ic_arrow_left_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar_5"
+                android:layout_toRightOf="@+id/bank_detail_back_iv"
+                android:text="Bank Detail"
+                android:textColor="@color/White"
+                android:textSize="@dimen/textSize20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/mar_40"
+            android:paddingLeft="@dimen/mar_20"
+            android:paddingTop="@dimen/mar_20"
+            android:background="@color/White"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Bank Account Detail"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/textSize18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mar_50"
+                android:layout_marginTop="@dimen/mar_5"
+                android:text="Provide your bank detailwhere admin will deposite your earnings though food delivery app"
+                android:textSize="@dimen/textSize14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_40"
+                android:text="Account Holder Name"
+                android:textSize="@dimen/textSize16sp" />
+
+            <EditText
+                android:id="@+id/bank_detail_holder_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mar_60"
+                android:layout_marginTop="@dimen/mar_5"
+                android:background="@null"
+                android:hint="Account Holder Name"
+                android:inputType="text"
+                android:text="Sachin Harishbhai Parekh"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/textSize18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_marginRight="@dimen/mar_80"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_20"
+                android:text="Bank Name"
+                android:textSize="@dimen/textSize16sp" />
+
+            <Spinner
+                android:id="@+id/bank_detail_bank_name_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar__8"
+                android:layout_marginRight="@dimen/mar_60"
+                android:layout_marginTop="@dimen/mar__5"
+                android:entries="@array/bank_names" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_marginTop="@dimen/mar__5"
+                android:layout_marginRight="@dimen/mar_80"
+                android:background="@color/Gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_20"
+                android:text="Branch Code"
+                android:textSize="@dimen/textSize16sp" />
+
+            <EditText
+                android:id="@+id/bank_detail_branch_code_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mar_60"
+                android:layout_marginTop="@dimen/mar_5"
+                android:background="@null"
+                android:hint="Brnach Code"
+                android:inputType="text"
+                android:text="HSBC02152142"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/textSize18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_marginRight="@dimen/mar_80"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_20"
+                android:text="Account Number"
+                android:textSize="@dimen/textSize16sp" />
+
+            <EditText
+                android:id="@+id/bank_detail_account_number_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mar_60"
+                android:layout_marginTop="@dimen/mar_5"
+                android:background="@null"
+                android:hint="Account Number"
+                android:inputType="number"
+                android:text="1122 2255 1542 3650"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/textSize18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:layout_marginRight="@dimen/mar_80"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@color/Gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:paddingTop="@dimen/mar_20"
+            android:paddingBottom="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_100">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_40"
+                android:text="Update Info"
+                android:textColor="@color/White"
+                android:id="@+id/bank_detail_update_btn"
+                android:layout_marginLeft="@dimen/mar_30"
+                android:layout_marginRight="@dimen/mar_30"
+                android:background="@drawable/button_background_red"
+                android:textSize="@dimen/textSize16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

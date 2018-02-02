@@ -5,20 +5,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.Spinner;
 
 import com.example.user.codechef.R;
 import com.example.user.codechef.utils.util.Logger;
@@ -33,24 +26,24 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class AddItemActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
 
-    @BindView(R.id.add_item_camera_iv)
-    ImageView mItemImageView;
-    @BindView(R.id.add_item_spinner_tv)
-    Spinner mItemTypeSpinner;
-    @BindView(R.id.add_item_back_iv)
+    @BindView(R.id.profile_restro_camera_iv)
+    ImageView mProfileRestroImageView;
+    @BindView(R.id.profile_restro_back_iv)
     ImageView mBackIv;
-    private ArrayAdapter<String> mItemTypeAdapter;
+    @BindView(R.id.profile_restro_edit_iv)
+    ImageView mRestroEditIv;
+    @BindView(R.id.profile_restro_address_edit_iv)
+    ImageView mRestroAddressEditIv;
     private static final int CAMERA_INTENT_CODE=101;
     private String mCurrentPhotoPath="";
-    private String[] itemcat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_item);
+        setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(getResources().getColor(R.color.Lime));
@@ -60,51 +53,29 @@ public class AddItemActivity extends AppCompatActivity {
 
     private void init() {
         initVariables();
-        setSpinnerAdapter();
     }
 
     private void initVariables() {
-        itemcat=getResources().getStringArray(R.array.item_type);
-        mItemImageView.setColorFilter(getResources().getColor(R.color.LightGray));
+        mProfileRestroImageView.setColorFilter(getResources().getColor(R.color.LightGray));
+        mRestroEditIv.setColorFilter(getResources().getColor(R.color.Gray_shade2));
+        mRestroAddressEditIv.setColorFilter(getResources().getColor(R.color.Gray_shade2));
     }
 
-    private void setSpinnerAdapter() {
-        mItemTypeAdapter=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item) {
-            @Override
-            public boolean isEnabled(int position) {
-                return position!=0 && super.isEnabled(position);
-            }
-        };
-        mItemTypeAdapter.clear();
-        mItemTypeAdapter.addAll(itemcat);
-        mItemTypeSpinner.setAdapter(mItemTypeAdapter);
-    }
-
-    @OnClick({R.id.add_item_camera_iv})
+    @OnClick({R.id.profile_restro_camera_iv})
     public void onClickCameraIv()  {
         Intent galleryIntent=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         Intent cameraIntent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        File photoFile=null;
-        /*File photoFile=null;
-        try {
-            photoFile = createImageFile();
-        }catch (IOException ex) {
-            Logger.LogDebug("",ex.getMessage());
-        }
-        *///if(photoFile!=null) {
-            //Uri photoUri= FileProvider.getUriForFile(this,"com.example.android.fileprovider",photoFile);
         try {
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(createImageFile()));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //}
-        Intent chooserIntent=Intent.createChooser(galleryIntent,"Select Item Image");
+        Intent chooserIntent=Intent.createChooser(galleryIntent,"Select Restaurant Image");
         chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS,new Intent[]{cameraIntent});
         startActivityForResult(chooserIntent,CAMERA_INTENT_CODE);
     }
 
-    @OnClick({R.id.add_item_back_iv})
+    @OnClick({R.id.profile_restro_back_iv})
     public void onClickBackIv() {
         onBackPressed();
     }
@@ -128,9 +99,9 @@ public class AddItemActivity extends AppCompatActivity {
                 Logger.LogDebug("Hello gallery",mCurrentPhotoPath);
                 if(!mCurrentPhotoPath.isEmpty()) {
                     Bitmap bitmap= BitmapFactory.decodeFile(mCurrentPhotoPath);
-                    mItemImageView.setImageBitmap(bitmap);
-                    mItemImageView.setColorFilter(0);
-                    mItemImageView.setPadding(0,0,0,0);
+                    mProfileRestroImageView.setImageBitmap(bitmap);
+                    mProfileRestroImageView.setColorFilter(0);
+                    mProfileRestroImageView.setPadding(0,0,0,0);
                 }
             } else {
                 Bitmap bitmap=(Bitmap)data.getExtras().get("data");
@@ -140,9 +111,9 @@ public class AddItemActivity extends AppCompatActivity {
                 Logger.LogDebug("Hello Camera",mCurrentPhotoPath);
                 if(!mCurrentPhotoPath.isEmpty()) {
                     Bitmap bitmap2= BitmapFactory.decodeFile(mCurrentPhotoPath);
-                    mItemImageView.setImageBitmap(bitmap2);
-                    mItemImageView.setColorFilter(0);
-                    mItemImageView.setPadding(0,0,0,0);
+                    mProfileRestroImageView.setImageBitmap(bitmap2);
+                    mProfileRestroImageView.setColorFilter(0);
+                    mProfileRestroImageView.setPadding(0,0,0,0);
                 }
             }
         }
@@ -161,5 +132,6 @@ public class AddItemActivity extends AppCompatActivity {
         int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
         return cursor.getString(idx);
     }
+
 
 }

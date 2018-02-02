@@ -16,6 +16,18 @@
         <item>Non-Veg Food</item>
     </string-array>
 
+    <string-array name="bank_names">
+        <item>Select Bank Name</item>
+        <item>AXIS Bank</item>
+        <item>HDFC Bank</item>
+        <item>HSBC Bank</item>
+        <item>ICICI Bank</item>
+        <item>INDUS Bank</item>
+        <item>SBI Bank</item>
+        <item>PNB Bank</item>
+        <item>UNION Bank Bank</item>
+    </string-array>
+
     <integer-array name="account_list_icons">
         <item>@drawable/ic_person</item>
         <item>@drawable/ic_review</item>
