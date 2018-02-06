@@ -1,41 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/mar_30"
-        android:layout_marginLeft="@dimen/mar_40"
-        android:layout_marginRight="@dimen/mar_40"
-        android:layout_marginBottom="@dimen/mar_20"
-        android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/mar_20"
+    android:paddingLeft="@dimen/mar_40"
+    android:paddingRight="@dimen/mar_40"
+    android:paddingTop="@dimen/mar_30">
 
     <EditText
+        android:id="@+id/register_email_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:id="@+id/register_email_et"
+        android:hint="Email Address"
         android:inputType="textEmailAddress"
-        android:textSize="@dimen/textSize12sp"
-        android:hint="Email Address"/>
+        android:textSize="@dimen/textSize12sp" />
 
     <View
+        android:id="@+id/register_email_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/mar_0_2"
-        android:layout_marginTop="@dimen/mar_10"
         android:layout_below="@+id/register_email_et"
-        android:id="@+id/register_email_view"
-        android:background="@color/Gray"/>
+        android:layout_marginTop="@dimen/mar_10"
+        android:background="@color/Gray" />
 
     <LinearLayout
+        android:id="@+id/register_pass_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_email_view"
-        android:id="@+id/register_pass_layout"
         android:layout_marginTop="@dimen/mar_30"
         android:orientation="horizontal">
 
@@ -44,109 +39,110 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <EditText
+                android:id="@+id/register_pass_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:id="@+id/register_pass_et"
+                android:hint="New Password"
                 android:inputType="textPassword"
-                android:textSize="@dimen/textSize12sp"
-                android:hint="New Password"/>
+                android:textSize="@dimen/textSize12sp" />
 
             <View
+                android:id="@+id/register_pass_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/mar_0_2"
                 android:layout_marginTop="@dimen/mar_10"
-                android:id="@+id/register_pass_view"
-                android:background="@color/Gray"/>
+                android:background="@color/Gray" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginLeft="@dimen/mar_30"
+            android:layout_weight="1"
             android:orientation="vertical">
+
             <EditText
+                android:id="@+id/register_confirm_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:id="@+id/register_confirm_et"
+                android:hint="Confirm"
                 android:inputType="textPassword"
-                android:textSize="@dimen/textSize12sp"
-                android:hint="Confirm"/>
+                android:textSize="@dimen/textSize12sp" />
 
             <View
+                android:id="@+id/register_confirm_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/mar_0_2"
                 android:layout_marginTop="@dimen/mar_10"
-                android:id="@+id/register_confirm_view"
-                android:background="@color/Gray"/>
+                android:background="@color/Gray" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <EditText
+        android:id="@+id/register_phone_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null"
-        android:id="@+id/register_phone_et"
         android:layout_below="@+id/register_pass_layout"
         android:layout_marginTop="@dimen/mar_30"
+        android:background="@null"
+        android:hint="10 digit Phone Number"
         android:inputType="phone"
-        android:textSize="@dimen/textSize12sp"
-        android:hint="10 digit Phone Number"/>
+        android:textSize="@dimen/textSize12sp" />
 
     <View
+        android:id="@+id/register_phone_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/mar_0_2"
-        android:layout_marginTop="@dimen/mar_10"
         android:layout_below="@+id/register_phone_et"
-        android:id="@+id/register_phone_view"
-        android:background="@color/Gray"/>
+        android:layout_marginTop="@dimen/mar_10"
+        android:background="@color/Gray" />
 
-        <Button
-            android:id="@+id/register_btn"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/mar_40"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/register_phone_view"
-            android:layout_marginTop="29dp"
-            android:background="@drawable/button_background_red"
-            android:text="Register Now"
-            android:textAllCaps="false"
-            android:textColor="@color/White"
-            android:textSize="@dimen/textSize14sp" />
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mar_40"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/register_phone_view"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/button_background_red"
+        android:text="Register Now"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:textSize="@dimen/textSize14sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_btn"
-        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/mar_20"
         android:gravity="center"
-        android:layout_marginTop="@dimen/mar_20">
+        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/register_ar_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already registered?"
-            android:id="@+id/register_ar_tv"
-            android:textSize="@dimen/textSize12sp"
-            android:textColor="@color/Gray"/>
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/textSize12sp" />
 
         <TextView
+            android:id="@+id/register_signin_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign in Now"
-            android:id="@+id/register_signin_tv"
             android:textColor="@color/OrangeRed"
-            android:textSize="@dimen/textSize12sp"/>
+            android:textSize="@dimen/textSize12sp" />
     </LinearLayout>
 
-</RelativeLayout>
 </RelativeLayout>

@@ -87,23 +87,37 @@ public class DeliveryInfoActivity extends AppCompatActivity implements OnMapRead
         }
     }
 
-    protected void createMarker(double latitude, double longitude, String title, String snippet, int iconResID) {
+    protected void createMarker() {
 
-        googleMap.addMarker(new MarkerOptions()
-                .position(new LatLng(latitude, longitude))
-                .anchor(0.5f, 0.5f)
-                .title(title)
-                .snippet(snippet)
-                .icon(BitmapDescriptorFactory.fromResource(iconResID)));
+        LatLng latLng,latLng2;
+        getLatLang(mMarkerList.get(0).getmTitle(),0);
+        MarkerOptions markerOptionsSource = new MarkerOptions();
+        latLng = new LatLng(mMarkerList.get(0).getmLatitude(), mMarkerList.get(0).getmLongitude());
+        markerOptionsSource.position(latLng);
+        markerOptionsSource.title("Source");
+        markerOptionsSource.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+        googleMap.addMarker(markerOptionsSource);
 
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(
+        /*googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo(11));*/
+        getLatLang(mMarkerList.get(1).getmTitle(),1);
+        MarkerOptions markerOptionsDestination = new MarkerOptions();
+        latLng2 = new LatLng(mMarkerList.get(1).getmLatitude(),mMarkerList.get(1).getmLongitude());
+        markerOptionsDestination.position(latLng2);
+        markerOptionsDestination.title("Destination");
+        markerOptionsDestination.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+
+        googleMap.addMarker(markerOptionsDestination);
+
+
+        /*CameraPosition cameraPosition = new CameraPosition.Builder().target(
                 new LatLng(latitude, longitude)).zoom(12).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));*/
     }
 
     private void setMarkerArray() {
-        mMarkerList.add(new MarkerData(38.609556, -1.139637, "Umm Amar Road, Dubai", "Snippet1", R.drawable.ic_location));
-        mMarkerList.add(new MarkerData(40.4272414, -3.7020037, "22 Old Golden Road, Dubai", "Snippet2", R.drawable.ic_location));
+        mMarkerList.add(new MarkerData(0.0, 0.0, "Inderlok, New Delhi, India", "Snippet1", R.drawable.ic_location));
+        mMarkerList.add(new MarkerData(40.4272414, -3.7020037, "Moti Nagar, New Delhi, India", "Snippet2", R.drawable.ic_location));
         mMarkerList.add(new MarkerData());
     }
 
@@ -134,11 +148,9 @@ public class DeliveryInfoActivity extends AppCompatActivity implements OnMapRead
     }
 
     private void setUpMap() {
-        googleMap.setMyLocationEnabled(true);
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         googleMap.getUiSettings().setZoomGesturesEnabled(true);
         googleMap.getUiSettings().setCompassEnabled(true);
-        googleMap.getUiSettings().setMyLocationButtonEnabled(true);
         googleMap.getUiSettings().setRotateGesturesEnabled(true);
         googleMap.setTrafficEnabled(true);
         googleMap.setIndoorEnabled(true);
@@ -151,6 +163,11 @@ public class DeliveryInfoActivity extends AppCompatActivity implements OnMapRead
         //marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         */
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        createMarker();
+        mLocationRequest = LocationRequest.create();
+        mLocationRequest.setInterval(5000);
+        mLocationRequest.setFastestInterval(1000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         /*for (int i = 0; i < mMarkerList.size() - 1; i++) {
             getLatLang(mMarkerList.get(i).getmTitle(), i);
             createMarker(mMarkerList.get(i).getmLatitude(), mMarkerList.get(i).getmLongitude(), mMarkerList.get(i).getmTitle(), mMarkerList.get(i).getmSnippet(), mMarkerList.get(i).getmResId());
@@ -259,31 +276,22 @@ public class DeliveryInfoActivity extends AppCompatActivity implements OnMapRead
         }
 
         //Place current location marker
-        LatLng latLng;
-        getLatLang(mMarkerList.get(0).getmTitle(),0);
-        MarkerOptions markerOptionsSource = new MarkerOptions();
-        latLng = new LatLng(mMarkerList.get(0).getmLatitude(), mMarkerList.get(0).getmLongitude());
-        markerOptionsSource.position(latLng);
-        markerOptionsSource.title("Current Position");
-        markerOptionsSource.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
 
-
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-        /*getLatLang(mMarkerList.get(1).getmTitle(),1);
-        MarkerOptions markerOptionsDestination = new MarkerOptions();
-        latLng = new LatLng(location.getLatitude(),location.getLongitude());
-        markerOptionsDestination.position(latLng);
-        markerOptionsDestination.title("Current Position");
-        markerOptionsDestination.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-
-        mCurrLocationMarker = googleMap.addMarker(markerOptionsDestination);
-        */googleMap.addMarker(markerOptionsSource);
 
         //move map camera
-        latLng = new LatLng(location.getLatitude(),location.getLongitude());
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        LatLng latLng3;
+        latLng3 = new LatLng(location.getLatitude(),location.getLongitude());
+        MarkerOptions markerCurrent=new MarkerOptions();
+        markerCurrent.title("My Location");
+        markerCurrent.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_car));
+        markerCurrent.flat(true);
+        markerCurrent.anchor(0.5f,0.5f);
+        markerCurrent.position(latLng3);
+        mCurrLocationMarker = googleMap.addMarker(markerCurrent);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng3));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+
+        //googleMap.addPolyline(new PolylineOptions().add( new LatLng(latLng.latitude,latLng.longitude) , new LatLng(latLng2.latitude,latLng2.longitude) ).width(5).color(Color.RED));
 
         //stop location updates
         if (mGoogleApiClient != null) {

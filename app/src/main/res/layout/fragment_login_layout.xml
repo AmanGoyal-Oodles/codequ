@@ -1,115 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/mar_40"
-    android:layout_marginLeft="@dimen/mar_40"
-    android:layout_marginRight="@dimen/mar_40"
-    android:layout_marginBottom="@dimen/mar_20"
-    android:orientation="vertical">
+    android:paddingBottom="@dimen/mar_20"
+    android:paddingLeft="@dimen/mar_40"
+    android:paddingRight="@dimen/mar_40"
+    android:paddingTop="@dimen/mar_40">
 
     <EditText
+        android:id="@+id/signin_email_add_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_10"
         android:background="@null"
         android:hint="Email Address"
-        android:layout_marginTop="@dimen/mar_10"
-        android:id="@+id/signin_email_add_et"
         android:inputType="textEmailAddress"
-        android:textSize="@dimen/textSize12sp"/>
+        android:textSize="@dimen/textSize12sp" />
 
     <View
+        android:id="@+id/signin_email_add_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/mar_0_2"
         android:layout_below="@+id/signin_email_add_et"
-        android:id="@+id/signin_email_add_view"
         android:layout_marginTop="@dimen/mar_5"
-        android:background="@color/Gray"/>
+        android:background="@color/Gray" />
 
     <EditText
+        android:id="@+id/signin_password_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null"
         android:layout_below="@+id/signin_email_add_view"
-        android:id="@+id/signin_password_et"
         android:layout_marginTop="@dimen/mar_20"
-        android:inputType="textPassword"
+        android:background="@null"
         android:hint="Password"
-        android:textSize="@dimen/textSize12sp"/>
+        android:inputType="textPassword"
+        android:textSize="@dimen/textSize12sp" />
 
     <ImageView
+        android:id="@+id/signin_password_visible_iv"
         android:layout_width="@dimen/mar_20"
         android:layout_height="@dimen/mar_20"
-        android:src="@drawable/ic_hide"
-        android:id="@+id/signin_password_visible_iv"
+        android:layout_alignParentRight="true"
         android:layout_below="@id/signin_email_add_view"
         android:layout_marginTop="@dimen/mar_20"
-        android:layout_alignParentRight="true"/>
+        android:src="@drawable/ic_hide" />
 
     <View
+        android:id="@+id/signin_password_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/mar_0_2"
-        android:layout_marginTop="@dimen/mar_5"
-        android:id="@+id/signin_password_view"
         android:layout_below="@+id/signin_password_et"
-        android:background="@color/Gray"/>
+        android:layout_marginTop="@dimen/mar_5"
+        android:background="@color/Gray" />
 
     <TextView
+        android:id="@+id/signin_forgot_pass_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_below="@id/signin_password_view"
         android:layout_marginTop="@dimen/mar_10"
-        android:id="@+id/signin_forgot_pass_tv"
         android:padding="@dimen/mar_10"
         android:text="Forgot Password?"
-        android:textSize="@dimen/textSize10sp"
         android:textColor="@color/OrangeRed"
-        android:layout_alignParentRight="true"/>
+        android:textSize="@dimen/textSize10sp" />
 
     <Button
+        android:id="@+id/signin_btn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/mar_40"
         android:layout_below="@+id/signin_forgot_pass_tv"
         android:layout_marginTop="@dimen/mar_40"
         android:background="@drawable/button_background_red"
         android:text="Sign in"
-        android:id="@+id/signin_btn"
-        android:textColor="@color/White"
         android:textAllCaps="false"
-        android:textSize="@dimen/textSize14sp"/>
+        android:textColor="@color/White"
+        android:textSize="@dimen/textSize14sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/signin_btn"
-        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/mar_30"
         android:gravity="center"
-        android:layout_marginTop="@dimen/mar_30">
+        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/sigin_nry_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Not registered yet?"
-            android:id="@+id/sigin_nry_tv"
-            android:textSize="@dimen/textSize12sp"
-            android:textColor="@color/Gray"/>
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/textSize12sp" />
 
         <TextView
+            android:id="@+id/signin_signup_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign up Now"
-            android:id="@+id/signin_signup_tv"
             android:textColor="@color/OrangeRed"
-            android:textSize="@dimen/textSize12sp"/>
+            android:textSize="@dimen/textSize12sp" />
+
     </LinearLayout>
 
-
-</RelativeLayout>
 
 </RelativeLayout>
