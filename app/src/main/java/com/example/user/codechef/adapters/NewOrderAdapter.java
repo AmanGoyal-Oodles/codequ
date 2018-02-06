@@ -1,17 +1,22 @@
 package com.example.user.codechef.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.user.codechef.R;
+import com.example.user.codechef.activities.OrderInfoActivity;
 import com.example.user.codechef.utils.pojoclasses.NewOrderDetail;
 import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by user on 2/1/2018.
@@ -83,11 +88,19 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.NewOrd
         TextView orderStatusTv;
         @BindView(R.id.new_order_arrow_right_iv)
         ImageView arrowRightIv;
+        @BindView(R.id.new_order_item_layout)
+        LinearLayout mItemLayout;
         int orderStatusFlag=0;
 
         public NewOrderHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
+        }
+
+        @OnClick({R.id.new_order_item_layout})
+        public void onClickItemLayout() {
+            Intent intent=new Intent(mContext, OrderInfoActivity.class);
+            mContext.startActivity(intent);
         }
     }
 }

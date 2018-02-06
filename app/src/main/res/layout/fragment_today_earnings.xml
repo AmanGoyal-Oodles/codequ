@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/today_earnings_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar_20"
+            android:gravity="center"
+            android:text="Saturday 25th Jan, 2018"
+            android:textSize="@dimen/textSize18sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_total_val_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_date_tv"
+            android:layout_marginTop="@dimen/mar_20"
+            android:gravity="center"
+            android:text="200 BD"
+            android:textColor="@color/OrangeRed"
+            android:textSize="@dimen/textSize28sp" />
+
+        <View
+            android:id="@+id/today_earnings_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_5"
+            android:layout_below="@+id/today_earnings_total_val_tv"
+            android:layout_marginTop="@dimen/mar_20"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/today_earnings_trip_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_view"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_20"
+            android:text="Trip Earning"
+            android:textColor="@color/OrangeRed"
+            android:textSize="@dimen/textSize18sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_service_price_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_trip_text_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Service Price"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_service_price_val_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/today_earnings_trip_text_tv"
+            android:layout_marginRight="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="15.00 BD"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_delivery_charges_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_service_price_text_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Delivery Charges"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_delivery_charges_val_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/today_earnings_service_price_text_tv"
+            android:layout_marginRight="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="1.00 BD"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_admin_profit_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_delivery_charges_text_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Admin Profit"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_admin_profit_val_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/today_earnings_delivery_charges_text_tv"
+            android:layout_marginRight="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="2.00 BD"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_delivryman_profit_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_admin_profit_text_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Deliveryman Profit"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_deliveryman_profit_val_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/today_earnings_admin_profit_text_tv"
+            android:layout_marginRight="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="2.00 BD"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_deliveryman_trans_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_delivryman_profit_text_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_30"
+            android:text="Deliveryman Transaction"
+            android:textColor="@color/OrangeRed"
+            android:textSize="@dimen/textSize18sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_paid_order_amt_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_deliveryman_trans_text_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Paid Order Amount"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_paid_order_amt_val_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/today_earnings_deliveryman_trans_text_tv"
+            android:layout_marginRight="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="1.00 BD"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_cash_amt_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_paid_order_amt_text_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Cash Amount"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_cash_amt_val_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/today_earnings_paid_order_amt_text_tv"
+            android:layout_marginRight="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="1.00 BD"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_cash_on_hand_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_earnings_cash_amt_text_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="Cash Amount"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/today_earnings_cash_on_hand_val_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/today_earnings_cash_amt_text_tv"
+            android:layout_marginRight="@dimen/mar_10"
+            android:layout_marginTop="@dimen/mar_10"
+            android:text="2.00 BD"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/textSize16sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.user.codechef.activities.SupportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/mar_30"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Lime"
+            android:id="@+id/support_toolbar_layout"
+            android:padding="@dimen/mar_10">
+
+            <ImageView
+                android:id="@+id/support_back_iv"
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:src="@drawable/ic_arrow_left_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar_5"
+                android:layout_toRightOf="@+id/support_back_iv"
+                android:text="Support"
+                android:textColor="@color/White"
+                android:textSize="@dimen/textSize20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/mar_30"
+            android:background="@color/Lime"
+            android:id="@+id/support_logo_layout"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/mar_100"
+                android:layout_height="@dimen/mar_100"
+                android:src="@drawable/chef_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chefqu"
+                android:gravity="center_vertical"
+                android:textColor="@color/White"
+                android:textSize="@dimen/textSize30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/support_info_layout"
+            android:paddingLeft="@dimen/mar_20"
+            android:paddingRight="@dimen/mar_20"
+            android:background="@color/Lime"
+            android:paddingTop="@dimen/mar_30"
+            android:paddingBottom="@dimen/mar_40"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/mar_20"
+                    android:layout_height="@dimen/mar_20"
+                    android:src="@drawable/ic_email_white"
+                    android:id="@+id/support_email_iv" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/White"
+                    android:text="Email"
+                    android:layout_marginLeft="@dimen/mar_10"
+                    android:id="@+id/support_email_text_tv"
+                    android:textSize="@dimen/textSize16sp"
+                    android:layout_toRightOf="@+id/support_email_iv" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/support_email_text_tv"
+                    android:textColor="@color/White"
+                    android:layout_marginLeft="@dimen/mar_10"
+                    android:text="help@chefqu.com"
+                    android:id="@+id/support_email_val_tv"
+                    android:layout_toRightOf="@+id/support_email_iv" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/mar_20"
+                    android:layout_height="@dimen/mar_20"
+                    android:src="@drawable/ic_phone_white"
+                    android:id="@+id/support_phone_iv" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/White"
+                    android:text="Phone"
+                    android:layout_marginLeft="@dimen/mar_10"
+                    android:id="@+id/support_phone_text_tv"
+                    android:textSize="@dimen/textSize16sp"
+                    android:layout_toRightOf="@+id/support_phone_iv" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/support_phone_text_tv"
+                    android:textColor="@color/White"
+                    android:layout_marginLeft="@dimen/mar_10"
+                    android:text="+91 9876543210"
+                    android:id="@+id/support_phone_val_tv"
+                    android:layout_toRightOf="@+id/support_phone_iv" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginRight="@dimen/mar_20"
+            android:paddingLeft="@dimen/mar_30"
+            android:paddingRight="@dimen/mar_30"
+            android:paddingTop="@dimen/mar_30"
+            android:paddingBottom="@dimen/mar_10"
+            android:layout_marginTop="-30dp"
+            android:background="@color/White"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Name"
+                android:textSize="@dimen/textSize16sp"
+                android:id="@+id/support_name_et"
+                android:textColorHint="@color/Gray"
+                android:textColor="@color/Black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:background="@color/Gray"
+                android:layout_marginTop="@dimen/mar_15"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Email"
+                android:layout_marginTop="@dimen/mar_30"
+                android:textSize="@dimen/textSize16sp"
+                android:id="@+id/support_email_et"
+                android:textColorHint="@color/Gray"
+                android:textColor="@color/Black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:background="@color/Gray"
+                android:layout_marginTop="@dimen/mar_15"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Your Message"
+                android:textSize="@dimen/textSize16sp"
+                android:layout_marginTop="@dimen/mar_30"
+                android:id="@+id/support_message_et"
+                android:textColorHint="@color/Gray"
+                android:textColor="@color/Black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_0_2"
+                android:background="@color/Gray"
+                android:layout_marginTop="@dimen/mar_15"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_40"
+                android:background="@drawable/button_background_red"
+                android:text="Send us"
+                android:textSize="@dimen/textSize16sp"
+                android:id="@+id/support_send_btn"
+                android:layout_marginTop="@dimen/mar_40"
+                android:textColor="@color/White"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

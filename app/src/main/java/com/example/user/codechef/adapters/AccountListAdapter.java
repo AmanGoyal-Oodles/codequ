@@ -15,8 +15,10 @@ import android.widget.TextView;
 
 import com.example.user.codechef.R;
 import com.example.user.codechef.activities.BankDetailActivity;
+import com.example.user.codechef.activities.EarningsActivity;
 import com.example.user.codechef.activities.ProfileActivity;
 import com.example.user.codechef.activities.ReviewActivity;
+import com.example.user.codechef.activities.SupportActivity;
 
 import java.util.ArrayList;
 
@@ -92,8 +94,12 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
                     mContext.startActivity(bankDetailIntent);
                     break;
                 case 4:
+                    Intent earningsActivity=new Intent(mContext, EarningsActivity.class);
+                    mContext.startActivity(earningsActivity);
                     break;
                 case 5:
+                    Intent supportActivity=new Intent(mContext, SupportActivity.class);
+                    mContext.startActivity(supportActivity);
                     break;
                 case 6:
                     break;

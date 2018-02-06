@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">CodeChef</string>
+    <string name="google_map_api_key">AIzaSyB4smHzbNjoN3YedEBa-FbWv2gdKxBrnQE</string>
+
+    <integer name="google_play_services_version">11910000</integer>
     <string-array name="account_list">
         <item>Profile</item>
         <item>Review</item>

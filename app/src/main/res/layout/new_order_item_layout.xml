@@ -5,6 +5,7 @@
     android:background="@color/White"
     android:layout_marginTop="@dimen/mar_2"
     android:layout_marginBottom="@dimen/mar_2"
+    android:id="@+id/new_order_item_layout"
     android:layout_height="wrap_content">
 
     <RelativeLayout

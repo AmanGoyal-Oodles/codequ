@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.codechef.activities.DeliveryInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/order_info_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Lime"
+            android:padding="@dimen/mar_10">
+
+            <ImageView
+                android:id="@+id/delivery_info_back_iv"
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:src="@drawable/ic_arrow_left_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar_5"
+                android:layout_toRightOf="@+id/delivery_info_back_iv"
+                android:text="Delivery info"
+                android:textColor="@color/White"
+                android:textSize="@dimen/textSize20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar_5"
+            android:background="@color/White"
+            android:paddingBottom="@dimen/mar_10"
+            android:paddingLeft="@dimen/mar_20"
+            android:paddingRight="@dimen/mar_20"
+            android:paddingTop="@dimen/mar_10">
+
+            <TextView
+                android:id="@+id/delivery_info_person_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ahmed Ali"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/textSize14sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_payment_method_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Cash"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/textSize14sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_payment_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_1"
+                android:layout_toLeftOf="@+id/delivery_info_payment_method_tv"
+                android:text="Payment by "
+                android:textSize="@dimen/textSize12sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/mar_1"
+                android:text="40 BHD"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/textSize14sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_order_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_info_person_name_tv"
+                android:layout_marginTop="@dimen/mar_10"
+                android:text="Order #"
+                android:textSize="@dimen/textSize12sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_order_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_info_person_name_tv"
+                android:layout_marginTop="@dimen/mar_10"
+                android:layout_toRightOf="@+id/delivery_info_order_text_tv"
+                android:text="042"
+                android:textSize="@dimen/textSize12sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_dispatch_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_info_order_text_tv"
+                android:text="Ordered on "
+                android:textSize="@dimen/textSize12sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_ordered_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_info_order_text_tv"
+                android:layout_toRightOf="@+id/delivery_info_dispatch_text_tv"
+                android:text="07:02 pm, 01 Jan, 18"
+                android:textSize="@dimen/textSize12sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_300">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar_40"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/delivery_info_cancel_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/Gray_shade2">
+
+                <ImageView
+                    android:layout_width="@dimen/mar_20"
+                    android:layout_height="@dimen/mar_20"
+                    android:layout_gravity="center"
+                    android:id="@+id/delivery_info_cancel_iv"
+                    android:layout_marginLeft="@dimen/mar_30"
+                    android:src="@drawable/ic_close_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/mar_10"
+                    android:text="Cancel Order"
+                    android:textColor="@color/OrangeRed" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/delivery_info_call_man_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/Lime">
+
+                <ImageView
+                    android:layout_width="@dimen/mar_20"
+                    android:layout_height="@dimen/mar_20"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/mar_20"
+                    android:src="@drawable/ic_phone_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Lime"
+                    android:gravity="center"
+                    android:padding="@dimen/mar_10"
+                    android:text="Call Deliveryman"
+                    android:textColor="@color/White" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mar_20">
+
+            <TextView
+                android:id="@+id/delivery_info_man_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="David Anderson"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/textSize18sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_man_name_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_info_man_name_tv"
+                android:layout_marginLeft="@dimen/mar_2"
+                android:text="Deliveryman"
+                android:textSize="@dimen/textSize16sp" />
+
+            <TextView
+                android:id="@+id/delivery_info_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="On the way"
+                android:textSize="@dimen/textSize16sp" />
+
+            <ImageView
+                android:id="@+id/delivery_info_source_iv"
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:layout_below="@+id/delivery_info_man_name_text_tv"
+                android:layout_marginTop="@dimen/mar_20"
+                android:background="@drawable/image_orange_red_background"
+                android:padding="@dimen/mar_5"
+                android:src="@drawable/ic_items_white" />
+
+            <TextView
+                android:id="@+id/delivery_info_source_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_info_man_name_text_tv"
+                android:layout_marginLeft="@dimen/mar_20"
+                android:layout_marginTop="@dimen/mar_25"
+                android:layout_toRightOf="@+id/delivery_info_source_iv"
+                android:text="Umm Amar Road, Dubai"
+                android:textSize="@dimen/textSize16sp" />
+
+            <ImageView
+                android:id="@+id/delivery_info_destination_iv"
+                android:layout_width="@dimen/mar_30"
+                android:layout_height="@dimen/mar_30"
+                android:layout_below="@+id/delivery_info_source_iv"
+                android:layout_marginTop="@dimen/mar_10"
+                android:background="@drawable/home_image_background"
+                android:padding="@dimen/mar_5"
+                android:src="@drawable/ic_home_white" />
+
+            <TextView
+                android:id="@+id/delivery_info_destnation_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_info_source_iv"
+                android:layout_marginLeft="@dimen/mar_20"
+                android:layout_marginTop="@dimen/mar_15"
+                android:layout_toRightOf="@+id/delivery_info_destination_iv"
+                android:text="22 Old Golden Road, Dubai"
+                android:textSize="@dimen/textSize16sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

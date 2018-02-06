@@ -12,6 +12,8 @@ public class NewOrderDetail {
     private String mOrderDate="";
     private String mPaymentMethod="";
     private int mOrderStatusFlag=0;
+    private String mAddress="";
+    private OrderItemDetail orderItemDetail;
 
     public NewOrderDetail(String mPersonName, String mPrice, String mOrderNumber, String mOrderDate, String mPaymentMethod, int mOrderStatusFlag) {
         this.mPersonName = mPersonName;
@@ -20,6 +22,7 @@ public class NewOrderDetail {
         this.mOrderDate = mOrderDate;
         this.mPaymentMethod = mPaymentMethod;
         this.mOrderStatusFlag = mOrderStatusFlag;
+        orderItemDetail=new OrderItemDetail();
     }
 
     public String getmPersonName() {
@@ -28,6 +31,22 @@ public class NewOrderDetail {
 
     public void setmPersonName(String mPersonName) {
         this.mPersonName = mPersonName;
+    }
+
+    public String getmAddress() {
+        return mAddress;
+    }
+
+    public void setmAddress(String mAddress) {
+        this.mAddress = mAddress;
+    }
+
+    public OrderItemDetail getOrderItemDetail() {
+        return orderItemDetail;
+    }
+
+    public void setOrderItemDetail(OrderItemDetail orderItemDetail) {
+        this.orderItemDetail = orderItemDetail;
     }
 
     public String getmPrice() {
